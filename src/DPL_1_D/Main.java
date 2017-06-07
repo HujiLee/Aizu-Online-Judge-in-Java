@@ -13,10 +13,10 @@ import java.io.StreamTokenizer;
  * 最长递增子序列
  */
 class Solver {
-    final char[] raw_sequence;
+    final long[] raw_sequence;
     final int[] LIS_table;
 
-    Solver(char[] raw_sequence) {
+    Solver(long[] raw_sequence) {
         this.raw_sequence = raw_sequence;
         LIS_table = new int[raw_sequence.length];
     }
@@ -55,12 +55,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         int length = getInt();
-        char[] seq = new char[length];
+        long[] seq = new long[length];
         for (int i = 0; i < length; i++) {
-            seq[i] = Character.forDigit(getInt(), 10);
+            seq[i] = (long) getInt();
         }
         Solver solver = new Solver(seq);
         System.out.println(solver.getResult());
 
     }
 }
+/*
+超时:
+Case #24:	: Time Limit Exceeded	12.77 sec	41684 KB	200007 B	3 B	05_maximum_01.in
+ */
