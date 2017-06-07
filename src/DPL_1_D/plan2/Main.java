@@ -10,7 +10,9 @@ import java.util.Stack;
 /**
  * Created by Administrator on 2017/6/7 0007.
  */
+
 class Debugger{
+
     static String list(List list){
         String s = "";
         for(Object o:list){
@@ -67,7 +69,9 @@ public class Main {
                     return middle;
                 }else{
                     //从这里可能造成无限的递归:当middle位置恰好为startIndex的时候
-
+                    if(middle==startIndex){
+                        return middle;
+                    }
                     return getNextIndex(toBeCompared, list, startIndex, middle-1-startIndex+1);
                 }
             }
@@ -91,73 +95,10 @@ public class Main {
         }
     }
 }
-/**
- Case #	Verdict	CPU Time	Memory	In	Out	Case Name
- Case #1:	: Accepted	00.03 sec	23968 KB	12 B	2 B	00_sample_00.in
- Case #2:	: Accepted	00.03 sec	24060 KB	8 B	2 B	00_sample_01.in
- Case #3:	: Accepted	00.03 sec	23980 KB	6 B	2 B	01_small_00.in
- Case #4:	: Accepted	00.03 sec	24196 KB	6 B	2 B	01_small_01.in
- Case #5:	: Accepted	00.03 sec	24052 KB	8 B	2 B	01_small_02.in
- Case #6:	: Accepted	00.03 sec	24216 KB	8 B	2 B	01_small_03.in
- Case #7:	: Accepted	00.02 sec	23824 KB	10 B	2 B	01_small_04.in
- Case #8:	: Accepted	00.02 sec	24048 KB	12 B	2 B	01_small_05.in
- Case #9:	: Accepted	00.03 sec	23996 KB	33 B	2 B	01_small_06.in
- Case #10:	: Accepted	00.03 sec	24076 KB	14 B	2 B	01_small_07.in
- Case #11:	: Runtime Error	-	-	103 B	2 B	02_rand_00.in
- */
 /*
-rand-in:
-50
-3
-3
-2
-9
-0
-8
-2
-6
-6
-9
-1
-1
-3
-5
-8
-3
-0
-6
-9
-2
-7
-7
-2
-8
-0
-3
-9
-2
-4
-9
-1
-7
-0
-4
-5
-0
-4
-0
-2
-4
-3
-1
-0
-6
-6
-1
-9
-7
-5
-1
-
-rand-out:8
+Run#	提出者	問題	結果	%	言語	時間	メモリ	コード長	提出日時
+2358981	Hujimiya	DPL_1_D: Longest Increasing Subsequence	: Accepted	30/30	JAVA	00:25 s	64392 KB	3739 B	2017-06-07 23:58
+ */
+/**
+ * @anchor http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=2358981#2
  */
