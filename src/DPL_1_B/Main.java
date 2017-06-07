@@ -5,6 +5,7 @@ package DPL_1_B;
  */
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 
 /**
@@ -55,7 +56,7 @@ final class Item{
     }
 }
 public class Main {
-    static StreamTokenizer streamTokenizer = new StreamTokenizer(System.in);
+    static StreamTokenizer streamTokenizer = new StreamTokenizer(new InputStreamReader(System.in));
     static int getInt() throws IOException {
         streamTokenizer.nextToken();
         return (int) streamTokenizer.nval;
