@@ -1,29 +1,31 @@
-package ALDS1_1_A;
+package ALDS1_1_A.use_array_list;
 
 /**
  * Created by Administrator on 2017/6/8 0008.
  */
 
-        import java.io.BufferedReader;
-        import java.io.IOException;
-        import java.io.InputStreamReader;
-        import java.io.StreamTokenizer;
-        import java.util.ArrayList;
-        import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @anchor http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_A&lang=jp
  */
 public class Main {
     static StreamTokenizer streamTokenizer = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+
     static int getInt() throws IOException {
         streamTokenizer.nextToken();
         return (int) streamTokenizer.nval;
     }
-    static void printArray(List<Integer> arr){
+
+    static void printArray(List<Integer> arr) {
         byte flag = 0;
-        for(Integer i:arr){
-            if(flag!=0){
+        for (Integer i : arr) {
+            if (flag != 0) {
                 System.out.print(" ");
             }
             System.out.print(i);
@@ -32,26 +34,27 @@ public class Main {
         System.out.println();
 
     }
+
     public static void main(String[] args) throws IOException {
         int arrLength = getInt();
         ArrayList<Integer> list = new ArrayList<Integer>();
-        for(int i =0;i<arrLength;i++){
+        for (int i = 0; i < arrLength; i++) {
             list.add(getInt());
         }
-        for(int i =0;i<arrLength;i++){
+        for (int i = 0; i < arrLength; i++) {
             int temp = list.get(i);
-            int specialIndex  = -1;
-            for(int j =0;j<i;j++){
-                if(list.get(j)>temp){
-                    specialIndex=j;
+            int specialIndex = -1;
+            for (int j = 0; j < i; j++) {
+                if (list.get(j) > temp) {
+                    specialIndex = j;
                     break;
                 }
             }
-            if(specialIndex>=0){
-                for(int k=i-1;k>=specialIndex;k--){
-                    list.set(k+1,list.get(k));
+            if (specialIndex >= 0) {
+                for (int k = i - 1; k >= specialIndex; k--) {
+                    list.set(k + 1, list.get(k));
                 }
-                list.set(specialIndex,temp);
+                list.set(specialIndex, temp);
             }
             printArray(list);
 
