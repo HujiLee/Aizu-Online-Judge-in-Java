@@ -11,34 +11,36 @@ import java.util.Scanner;
  */
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static class Helper{
-        static boolean[] shouldBeDelete = new boolean[100000000+1];
+
+    static class Helper {
+        static boolean[] shouldBeDelete = new boolean[100000000 + 1];
         static int lastIndex = 2;
-        static boolean isPrime(int number){
-            if(number<2){
+
+        static boolean isPrime(int number) {
+            if (number < 2) {
                 return false;
             }
-            if(number>lastIndex){
+            if (number > lastIndex) {
                 deleteUtil(number);
 
             }
             return !shouldBeDelete[number];
         }
-        static void deleteUtil(int index){
-            assert (index>lastIndex);
-            for(int i =2;i<=lastIndex;i++){
-                if(!shouldBeDelete[i]){
-                    for(int k = lastIndex+1;k<=index;k++){
-                        if(!shouldBeDelete[k]){
-                            if(k%i==0){
-                                shouldBeDelete[k]=true;
-                            }
-                        }
 
+        static void deleteUtil(int index) {
+            assert (index > lastIndex);
+            for (int k = lastIndex + 1; k <= index; k++) {
+                for (int i = 2; i <= lastIndex; i++) {
+                    if (!shouldBeDelete[i]) {
+                        if (k % i == 0) {
+                            shouldBeDelete[k] = true;
+                            break;
+                        }
                     }
                 }
+                lastIndex++;
             }
-            lastIndex =index;
+
 
         }
     }
@@ -46,8 +48,8 @@ public class Main {
     public static void main(String[] args) {
         int lengthOfList = scanner.nextInt();
         int countPrimeNumber = 0;
-        while (lengthOfList>0){
-            if(Helper.isPrime(scanner.nextInt())){
+        while (lengthOfList > 0) {
+            if (Helper.isPrime(scanner.nextInt())) {
                 countPrimeNumber++;
             }
             lengthOfList--;
@@ -58,11 +60,11 @@ public class Main {
 }
 /*
 ステータス
-Judge: 2/4	JAVA	CPU: 01.50 sec	Memory: 128096 KB	Length: 1501 B	2017-06-09 00:41	2017-06-09 00:41
+Judge: 3/4	JAVA	CPU: 20.00 sec	Memory: 127728 KB	Length: 1975 B	2017-06-09 01:06	2017-06-09 01:06
 テストケースの判定結果
 Case #	Verdict	CPU Time	Memory	In	Out	Case Name
-Case #1:	: Accepted	00.07 sec	123996 KB	43 B	2 B	test_case_1
-Case #2:	: Accepted	00.08 sec	124096 KB	298 B	3 B	test_case_2
-Case #3:	: Wrong Answer	01.50 sec	128096 KB	5886 B	3 B	test_case_3
-Case #4:	-	-	-	88820 B	4 B	test_case_4
+Case #1:	: Accepted	00.07 sec	124012 KB	43 B	2 B	test_case_1
+Case #2:	: Accepted	00.08 sec	123772 KB	298 B	3 B	test_case_2
+Case #3:	: Accepted	00.73 sec	127728 KB	5886 B	3 B	test_case_3
+Case #4:	: Time Limit Exceeded	20.00 sec	124120 KB	88820 B	4 B	test_case_4
  */
