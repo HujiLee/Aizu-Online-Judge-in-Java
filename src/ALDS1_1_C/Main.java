@@ -132,14 +132,13 @@ public class Main {
 }
 /*
 Status
-Judge: 5/5	JAVA	CPU: 00.26 sec	Memory: 62884 KB	Length: 2116 B	2017-06-07 20:20	2017-06-07 20:20
+Judge: 4/4	JAVA	CPU: 00.28 sec	Memory: 68004 KB	Length: 4098 B	2017-06-19 21:51	2017-06-19 21:51
 Results for testcases
 Case #	Verdict	CPU Time	Memory	In	Out	Case Name
-Case #1:	: Accepted	00.03 sec	24092 KB	225 B	26 B	1.in
-Case #2:	: Accepted	00.03 sec	24156 KB	1464 B	246 B	2.in
-Case #3:	: Accepted	00.04 sec	24160 KB	1464 B	246 B	3.in
-Case #4:	: Accepted	00.26 sec	62884 KB	40043 B	80 B	4.in
-Case #5:	: Accepted	00.05 sec	36948 KB	5984 B	13 B	5.in
+Case #1:	: Accepted	00.06 sec	26020 KB	43 B	2 B	test_case_1
+Case #2:	: Accepted	00.06 sec	26828 KB	298 B	3 B	test_case_2
+Case #3:	: Accepted	00.10 sec	33012 KB	5886 B	3 B	test_case_3
+Case #4:	: Accepted	00.28 sec	68004 KB	88820 B	4 B	test_case_4
 
-http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=2358551#2
+http://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=2379880#2
  */
