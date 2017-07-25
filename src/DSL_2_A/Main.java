@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 class Solver{
     private ArrayList<Integer> list;
-    Solver(int size){
+    Solver(final int size){
         list = new ArrayList<Integer>(){{
            for(int i = 0;i<size;i++){
                this.add(Integer.MAX_VALUE);
