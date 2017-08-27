@@ -1,4 +1,4 @@
-package ALDS1_9_B;
+package ALDS1_9_B.v1OutOfTime;
 
 
 
@@ -99,3 +99,15 @@ public class Main {
 
     }
 }
+/*
+Status
+Judge: 5/6 JAVA CPU: 20.00 sec Memory: 700752 KB Length: 2685 B 2017-08-27 17:25 2017-08-27 17:25
+Results for testcases
+Case # Verdict CPU Time Memory In Out Case Name
+Case #1: : Accepted 00.03 sec 24448 KB 8 B 7 B 1.in
+Case #2: : Accepted 00.03 sec 24112 KB 30 B 28 B 2.in
+Case #3: : Accepted 00.03 sec 24044 KB 62 B 60 B 3.in
+Case #4: : Accepted 00.03 sec 24380 KB 296 B 293 B 4.in
+Case #5: : Accepted 00.07 sec 57976 KB 3898 B 3894 B 5.in
+Case #6: : Memory Limit Exceeded 20.00 sec 700752 KB 3388902 B 3388896 B 6.in
+ */
