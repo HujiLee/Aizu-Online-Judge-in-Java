@@ -73,10 +73,8 @@ class MaxHeap {
     public String toString() {
         String res = "";
         for(int i = 1;i<=SIZE;i++){
+            res += " ";
             res+=arrAsHeap[i];
-            if(i<SIZE){
-                res+=" ";
-            }
         }
         return res;
     }
